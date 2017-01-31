@@ -5,9 +5,10 @@
 <% @locations.each do |location| %>
 
  <!-- render is a method that takes arguments. The first argument is the name of the partial we want to render, leaving out the leading underscore. But this code is not sufficient to give the partial the location object that it needs. We therefore pass in the location object, whatever its name happens to be. We are using the name location in the partial, so we had better give it the same name when passing it. This is the left-hand side (the key) of the hash we are passing. The right-hand side (the value) is the location object itself. That is, in the index.html.erb file:-->
-  <div class="location">
+   <%= render 'location', location: location %>
+  <!--<div class="location">
     <h3>City: <%= location.city %></h3>
     <%= location.description %><br />
     <%= link_to image_tag(location.image, class: "location"), location %>
-  </div>
+  </div>-->
 <% end %>

@@ -1,0 +1,9 @@
+<!-- The entire purpose of this view is to render a piece of a webpage, and to do so potentially many times. For this reason it is called a partial view. We indicate this by having an underscore at the start of the file name (_location.html.erb). -->
+
+<h1><%= location.name %></h1>
+
+<div class="location">
+  <h3>City: <%= location.city %></h3>
+  <%= location.description %><br />
+  <%= link_to image_tag(location.image, class: "location"), location %>
+</div>
