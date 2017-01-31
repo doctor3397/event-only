@@ -2,7 +2,8 @@
 
 <%= link_to 'Show all locations', locations_path %>
 
-<%= form_for @location do |f| %>
+<%= render 'form', location: @location %>
+<!--<%= form_for @location do |f| %>
   <p>
     <%= f.label :name %>
     <%= f.text_field :name %>
@@ -28,3 +29,4 @@
   </p>
 
 <% end %>
+-->
