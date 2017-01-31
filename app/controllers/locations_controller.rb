@@ -48,6 +48,7 @@ class LocationsController < ApplicationController
     redirect_to locations_path
   end
 
+  private
   def location_params
     params.require(:location).permit(:name, :city, :description, :image)
   end
