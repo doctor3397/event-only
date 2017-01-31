@@ -1,0 +1,13 @@
+<!-- t.string   "name"
+t.integer  "location_id"
+t.date     "date"
+t.integer  "capacity" -->
+
+<% @events.each do |event| %>
+  <div>
+    <h3>Name: <%= event.name %></h3>
+    <p>Location ID: <%= event.location_id %></p>
+    <p>Date: <%= event.date %></p>
+    <p>Capacity: <%= event.capacity %></p>
+  </div>
+<% end %>
