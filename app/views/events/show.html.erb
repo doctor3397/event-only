@@ -2,6 +2,11 @@
   <%= link_to 'All Events', location_events_path %>
 </p>
 
+<p>
+  <%= link_to 'Edit', edit_location_event_path %>
+  | <%= link_to 'Delete', location_event_path(location_id: @location, id: @event), method: :delete, data: {confirm: "Are you sure you want to delete the event '#{@event.name}'? This cannot be undone!"} %>
+</p>
+
 <%= render 'event', event: @event %>
 
 <!-- <div>

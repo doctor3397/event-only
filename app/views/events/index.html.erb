@@ -11,5 +11,5 @@ t.integer  "capacity" -->
     <p>Date: <%= event.date %></p>
     <p>Event ID: <%= event.id %></p>
   </div> -->
-<%= link_to 'Event', [@location, @event] %>
+<%= link_to event.name, location_event_path(location_id: @location.id, id: event.id ) %>
 <% end %>
