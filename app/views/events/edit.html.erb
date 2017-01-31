@@ -1,1 +1,19 @@
-events#edit page
+<h1>Edit Event</h1>
+
+<%= link_to 'Show all events', location_events_path %>
+
+<%= form_for [@location, @event]  do |f| %>
+  <p>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </p>
+
+  <p>
+    <%= f.label :date %>
+    <%= f.text_field :date %>
+  </p>
+
+  <p>
+    <%= f.submit "Add Events" %>
+  </p>
+<% end %>
