@@ -1,1 +1,13 @@
-locations#show page
+<!-- <h1><%= @location.name %></h1> -->
+
+<p>
+  <%= link_to 'All Locations', locations_path %>
+</p>
+
+<!--<%= render @location %>-->
+<!--<%= render 'location', location: @location %>-->
+<div class="location">
+  <h3>City: <%= @location.city %></h3>
+  <%= @location.description %><br />
+  <%= link_to image_tag(@location.image, class: "location"), @location %>
+</div>
