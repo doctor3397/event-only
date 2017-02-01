@@ -3,6 +3,8 @@ t.integer  "location_id"
 t.date     "date"
 t.integer  "capacity" -->
 
+<%= link_to "Back to #{@location.name}", location_path(id: @location.id) %>
+
 <% @events.each do |event| %>
 <%= render 'event', event: event %>
   <!-- <div>
